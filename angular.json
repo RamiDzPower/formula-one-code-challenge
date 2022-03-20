@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "5c4ebe60-0568-44de-bb64-25de81e1c494"
+    "analytics": "b828af36-ec01-41fd-b9e9-2ef7266b5d2a"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "f1-challenge": {
+    "world-champion": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -18,25 +18,24 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "champ",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/f1-challenge",
+            "outputPath": "dist/world-champion",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/bootstrap-icons/font/bootstrap-icons.scss"
             ],
-            "scripts": []
+            "scripts": ["./node_modules/bootstrap/dist/js/bootstrap.min.js"]
           },
           "configurations": {
             "production": {
@@ -75,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "f1-challenge:build:production"
+              "browserTarget": "world-champion:build:production"
             },
             "development": {
-              "browserTarget": "f1-challenge:build:development"
+              "browserTarget": "world-champion:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +85,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "f1-challenge:build"
+            "browserTarget": "world-champion:build"
           }
         },
         "test": {
@@ -97,18 +96,14 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
-            "scripts": []
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
+            "scripts": [],
+            "codeCoverage": true
           }
         }
       }
     }
   },
-  "defaultProject": "f1-challenge"
+  "defaultProject": "world-champion"
 }
