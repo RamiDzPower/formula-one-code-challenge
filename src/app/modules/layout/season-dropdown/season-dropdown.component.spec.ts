@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SeasonDropdownComponent } from './season-dropdown.component';
+import { SeasonDropDownComponent } from './season-dropdown.component';
 
-describe('SeasonDropdownComponent', () => {
-  let component: SeasonDropdownComponent;
-  let fixture: ComponentFixture<SeasonDropdownComponent>;
+describe('SeasonDropDownComponent', () => {
+  let component: SeasonDropDownComponent;
+  let fixture: ComponentFixture<SeasonDropDownComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SeasonDropdownComponent ]
+      declarations: [ SeasonDropDownComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SeasonDropdownComponent);
+    fixture = TestBed.createComponent(SeasonDropDownComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
