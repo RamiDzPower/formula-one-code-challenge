@@ -30,3 +30,4 @@ In case of knowing more about project structure, dependencies, modules and ... y
 - Fix Hyperlink not able to click on it
 - Improve loading when swiching betwing seasons
 - Display all winners list for each GrandPrix 
+- Improve test coverage for Lines and Functions
