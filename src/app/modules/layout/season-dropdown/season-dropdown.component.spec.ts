@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SeasonFilterPipe } from 'src/app/shared/pipes/season-filter.pipe';
 
 import { SeasonDropDownComponent } from './season-dropdown.component';
 
@@ -8,7 +9,7 @@ describe('SeasonDropDownComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SeasonDropDownComponent ]
+      declarations: [ SeasonDropDownComponent, SeasonFilterPipe ]
     })
     .compileComponents();
   });
